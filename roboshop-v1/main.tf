@@ -34,15 +34,6 @@ resource "aws_instance" "redis" {
   }
 }
 
-resource "aws_instance" "catalogue" {
-  ami           = "ami-09c813fb71547fc4f"
-  instance_type = "t3.small"
-  vpc_security_group_ids = ["sg-0be95cb0c3fef9448"]
-  tags = {
-    Name = "catalogue"
-  }
-}
-
 resource "aws_instance" "user" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.small"
